@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20221103013533_WikiORT.cs" />
+    <Compile Remove="Migrations\20221103013533_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221103014124_WikiORT.cs" />
+    <Compile Remove="Migrations\20221103014124_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221106001538_WikiORT.cs" />
+    <Compile Remove="Migrations\20221106001538_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221110002425_WikiORT.cs" />
+    <Compile Remove="Migrations\20221110002425_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221110010840_WikiORT.cs" />
+    <Compile Remove="Migrations\20221110010840_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221110011821_WikiORT.cs" />
+    <Compile Remove="Migrations\20221110011821_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221113204338_WikiORT.cs" />
+    <Compile Remove="Migrations\20221113204338_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221124014623_WikiOrt.cs" />
+    <Compile Remove="Migrations\20221124014623_WikiOrt.Designer.cs" />
+    <Compile Remove="Migrations\20221125183809_WikiORT.cs" />
+    <Compile Remove="Migrations\20221125183809_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221127174825_WikiORT.cs" />
+    <Compile Remove="Migrations\20221127174825_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221127180859_WikiORT.cs" />
+    <Compile Remove="Migrations\20221127180859_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221127183050_WikiORT.cs" />
+    <Compile Remove="Migrations\20221127183050_WikiORT.Designer.cs" />
+    <Compile Remove="Migrations\20221127183319_WikiORT.cs" />
+    <Compile Remove="Migrations\20221127183319_WikiORT.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.30" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.30">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WikiORT.Models.Articulo>
+
+@{
+    ViewData["Title"] = "VistaParaAutores";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                         <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Mensajes" asp-action="Create">Crear mensajes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Articulos" asp-action="Create">Crear articulo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Autores" asp-action="EditarMiPerfil">Edita tu perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<h1>Articulos disponibles</h1>
+<tbody>
+    @foreach (var item in Model)
+    {
+                <div class="card text-center">
+            <div class="card-header">
+                <h3 class="card-title">Categoria:  @Html.DisplayFor(modelItem => item.Categoria.Nombre) </h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h5>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                    @Html.ActionLink("Ver mensajes", "ListaMensajesXArticulo", "Articulos", new { id = item.ArticuloId })
+            
+            </div>
+            <div class="card-footer text-muted">
+                Fecha: @Html.DisplayFor(modelItem => item.Fecha)
+            </div>
+            <div class="card-footer text-muted">
+                    Autor ID: @Html.DisplayFor(modelItem => item.AutorId)
+            
+            </div>
+            <div class="card-footer text-muted">
+                Articulo ID: @Html.DisplayFor(modelItem => item.ArticuloId)
+            </div>
+        
+        </div>
+            <p></p>
+    }
+</tbody>
+</body>
+
+

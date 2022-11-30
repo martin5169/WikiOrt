@@ -1,0 +1,27 @@
+﻿@model ListaMensajesXArticulo
+
+
+ <tbody>
+    @foreach (var item in Model.MensajesDelArticulo)
+    {
+
+             <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">@Html.DisplayFor(modelItem => item.Titulo)</h5>
+                                <small> @Html.DisplayFor(modelItem => item.Fecha)</small>
+                </div>
+                            <p class="mb-1">@Html.DisplayFor(modelItem => item.Texto)</p>
+           
+              </a>
+            </div>
+
+
+    }
+
+
+</tbody>
+<div class="pt-1 mb-4">
+    <button class="btn btn-info btn-lg btn-block" type="button" onclick="location.href='@Url.Action("VistaParaAutores", "Autores")'"> Volver al menu</button>
+</div>
+
