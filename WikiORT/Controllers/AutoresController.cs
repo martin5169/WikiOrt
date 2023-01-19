@@ -106,7 +106,7 @@ namespace WikiORT.Controllers
 
         public String devolverSessionId()
         {
-            return HttpContext.Session.GetString("AutorId").ToString();
+            return HttpContext.Session.GetString("AutorId");
 
         }
 
@@ -127,7 +127,7 @@ namespace WikiORT.Controllers
                     HttpContext.Session.SetString("Admin", false.ToString());
                     _context.Add(autor);
                     await _context.SaveChangesAsync();
-                    HttpContext.Session.SetString("AutorId", devolverSessionId());
+                   
                     return RedirectToAction("Index", "Home");
                 }
                 else

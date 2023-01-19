@@ -103,7 +103,7 @@ namespace WikiORT.Controllers
                     await _context.SaveChangesAsync();
                     HttpContext.Session.SetString("AdministradorId", devolverSessionId(administrador.Email));
                     //return RedirectToAction("VistaParaAdministradores", "Administradores");
-                    return RedirectToAction("Home","Index") ;
+                    return RedirectToAction("Index","Home") ;
                 }
                 else
                 {

@@ -22,7 +22,7 @@ namespace WikiORT.Controllers
         // GET: Articulos
         public async Task<IActionResult> Index()
         {
-            var wikiDatabaseContext = _context.Articulos.Include(a => a.Autor).Include(a => a.Categoria);
+            var wikiDatabaseContext = _context.Articulos.Include("Autor").Include("Categoria");
             return View(await wikiDatabaseContext.ToListAsync());
         }
 
